@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="{{ url_for('static',filename='mystyle.css')}}">
+<title>Page Title</title>
+
+</head>
+<body style="background-color: #9FBBD4;">
+
+<div class="sidebar">
+    <div class="checks">
+        <h1 style="text-align: center; color: white;">Rainbow Dash Bank</h1>
+        <ul class="check_list">            
+        </ul>
+    </div>
+</div>
+<div style="text-align:center;">
+    <a>
+        Check name:
+        <a style="display:grid;">
+        {{content[check_id][3]}}
+        </a>
+    </a>
+
+    <a>
+        {{content[check_id][1]}}
+    </a>
+</div>
+</body>
+</html>

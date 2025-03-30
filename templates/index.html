@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="{{ url_for('static',filename='mystyle.css')}}">
+<title>Page Title</title>
+</head>
+<body style="background-color: #9FBBD4;">
+
+<div class="sidebar">
+    <div class="checks">
+        <img src="/static/dash.png" style="margin-left:13%;margin-top:5%">
+
+        <div style="text-align: center; padding-top:40px">
+            <a style="color:white;font-size: 40px" href="{{url_for('user')}}">Личный кабинет</a>
+        </div>
+        <ul class="check_list" style="padding-top:40px">
+
+
+            {% for x in content %}
+
+                <li class="check">
+                    <div>
+                        <a class="check_name">{{x[3]}}</a>
+                        <div>
+                            <a href="{{url_for('check_ul', id=x[0])}}" class="price">{{x[1]}}</a>
+                            <a class="currency">{{x[2]}}</a>
+                        </div>
+                    </div>
+                </li>
+
+            {% endfor %}
+
+        </ul>
+        <div style="position: fixed;
+  bottom: 0;
+  width: 24%;
+  text-align: center;
+
+">
+        <a style="color:white;" href="{{url_for('create_check_func')}}">Create check</a>
+    </div>
+    </div>
+
+</div>
+
+<div style="margin-left:26%">
+
+   {% block content %}
+
+    {% endblock %}
+
+</div>
+</body>
+</html>

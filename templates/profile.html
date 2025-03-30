@@ -1,0 +1,77 @@
+{% extends "index.html" %}
+{% block content %}
+
+
+<div style="width: 75%;
+     background-color: white; margin-left:12.5%;
+      font-family: Arial, Helvetica, sans-serif;padding:5px;border-radius: 10px; margin-top:30px ;">
+        <ul>
+        <li style="display: inline;padding-right: 80%;">
+            <a style="font-size: 25px;font-weight: bold;">
+            Имя Фамилия:
+            </a>
+            <div  style="font-size: 30px; padding:10px">
+            <a>
+                {{user_data[1]}}
+                {{user_data[2]}}
+            </a>
+            </div>
+        </li>
+    </ul>
+    </div>
+
+
+
+
+
+<div style="width: 75%;
+     background-color: white; margin-left:12.5%;
+      font-family: Arial, Helvetica, sans-serif;padding:5px;border-radius: 10px; margin-top:30px ;">
+        <ul>
+        <li style="display: inline-block;padding-right: 80%;">
+            <a style="font-size: 25px;font-weight: bold;">
+            Номер телефона:
+            </a>
+            <div  style="font-size: 30px; padding:10px">
+            <a>
+            {{user_data[4]}}
+            </a>
+            </div>
+        </li>
+    </ul>
+    </div>
+<div style="width: 75%;
+     background-color: white; margin-left:12.5%;
+      font-family: Arial, Helvetica, sans-serif;padding:5px;border-radius: 10px; margin-top:30px ;">
+        <ul>
+        <li style="display: inline-block;padding-right: 80%;">
+            <a style="font-size: 25px;font-weight: bold;">
+            E-mail:
+            </a>
+            <div  style="font-size: 30px; padding:10px">
+            <a>
+            {{user_data[3]}}
+            </a>
+            </div>
+        </li>
+    </ul>
+    </div>
+<div style="width: 75%;
+     background-color: white; margin-left:12.5%;
+      font-family: Arial, Helvetica, sans-serif;padding:5px;border-radius: 10px; margin-top:30px ;">
+        <ul>
+        <li style="display: inline;padding-right: 80%;">
+            <a style="font-size: 25px;font-weight: bold;">
+            Адресс:
+            </a>
+            <div  style="font-size: 30px; padding:10px">
+            <a>
+            {{user_data[6]}}
+            </a>
+            </div>
+        </li>
+    </ul>
+    </div>
+
+
+{% endblock %}

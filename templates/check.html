@@ -1,0 +1,80 @@
+{% extends "index.html" %}
+{% block content %}
+<div style="width: 75%;text-align:center;
+     background-color: white; margin-left:12.5%;
+      font-family: Arial, Helvetica, sans-serif;padding: 10px;padding-top: 40px;padding-bottom: 40px;border-radius: 10px; margin-top:10px ;">
+        <ul>
+        <li style="display: inline-block;padding-right: 50%;">
+            <a style="font-size: 30px;font-weight: bold;">
+            Имя счета:
+            </a>
+            <div  style="font-size: 30px;">
+            <a>
+            {{content[check_id][3]}}
+
+            </a>
+
+            </div>
+        </li>
+        <li style="display: inline-block;">
+            <a style="font-size: 30px;font-weight: bold;">
+            Сумма:
+            </a>
+            <div  style="font-size: 30px;">
+            <a>
+            {{content[check_id][1]}}
+            </a>
+            <a>
+                {{content[check_id][2]}}
+            </a>
+            </div>
+        </li>
+    </ul>
+    </div>
+    <div style="margin-left: 15%; padding-top: 30px;font-family: Arial, Helvetica, sans-serif;">
+        <div style="display: inline-block; background-color: white; height: px; padding: 40px; margin-right: 7%; height: 200px;max-height: 200px; border-radius:10px">
+            <ul style="display: inline-block; font-size: 25px;">
+                <a style="font-weight: bold;">
+                Переводы:
+                </a>
+                <li style="margin-top: 10px;" >
+                    <a href="{{url_for('email_transfer',id = check_id)}}">Перевод по Email</a>
+                </li>
+                <li style="margin-top: 10px;">
+                    <a href="{{url_for('phone_transfer',id = check_id)}}">Перевод по Номеру телефона</a>
+                </li>
+                <li style="margin-top: 10px;">
+                    <a href="{{url_for('other_check',id = check_id)}}">Перевод на Другой счет</a>
+                </li>
+
+            </ul>
+        </div>
+        <div style="display: inline-block; background-color: white; height: px; padding: 40px; height: 200px;max-height: 200px; width: 30%;border-radius:10px">
+            <ul style="display: inline-block; font-size: 25px;">
+                <a style="font-weight: bold;">
+                Траты за месяц:
+                </a>
+                <li style="padding: 88px;">
+                    {{content[check_id][1] * 10 }} {{content[check_id][2]}}
+                </li>
+
+
+            </ul>
+        </div>
+        <div style="display: inline-block; background-color: white; border-radius:10px;margin-top:100px;width: 25%; margin-left:31%;text-align:center;padding:10px ">
+
+
+            <form method="post" style="text-align:center;">
+                <a style="font-weight: bold;font-size: 25px; ">
+                <input type="submit" name="delete" value="delete">
+                </a>
+            </form>
+
+
+
+
+
+        </div>
+
+    </div>
+{% endblock %}

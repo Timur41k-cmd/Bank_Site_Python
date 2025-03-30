@@ -1,0 +1,53 @@
+{% extends "index.html" %}
+{% block content %}
+<div style="  border-radius: 5px;
+  background-color: white;
+  padding: 20px;
+  margin: auto;
+  width:50%;
+  font-family: Arial, Helvetica, sans-serif;
+">
+<form method="post" style="text-align:center;">
+    <a style="width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+
+  ">{{answer}}</a>
+    <a style="width: 50%;
+  display: inline-block;
+  font-size:25px;
+  font-weight:bold;
+">Email</a>
+    <p><input type="text" name="email" style="width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;"></p>
+    <a style="width: 50%;
+  display: inline-block;
+  font-size:25px;
+  font-weight:bold;
+">Sum</a>
+    <p><input type="text" name="sum" style="width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;"></p>
+    <input type="submit" value="Sent" style="  width: 50%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+font-size:20px">
+</form>
+</div>
+
+{% endblock %}

@@ -1,0 +1,39 @@
+.sidebar{
+    display: flex;
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.sidebar .checks{
+    position: fixed;
+    width: 25%;
+    height: 100%;
+    background: black;
+}
+
+.check {
+    
+    margin-right:10%;
+    margin-top: 5%;
+    padding: 6%;
+    background-color: #9FBBD4;
+    list-style-type: none;
+    border-radius: 10px;
+}
+
+.check_name{
+    font-size: 20px;
+    position: relative;
+    bottom: 10px;
+    background-color: white;
+    padding: 5px;
+    border-radius: 5px;
+}
+.price{
+    font-size: 40px; margin-left: 2%;font-weight: bold;
+}
+
+.currency{
+    font-size: 40px;margin-left: 5%;font-weight: bold;
+}
+
